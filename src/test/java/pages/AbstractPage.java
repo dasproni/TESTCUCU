@@ -48,15 +48,5 @@ public class AbstractPage {
         }
         throw new RuntimeException();
     }
-    public WebElement getElementByLogin(String button) throws InvocationTargetException, IllegalAccessException{
-        for (Method method : this.getClass().getMethods()){
-            if (method.isAnnotationPresent(Element.class)){
-                Element element = method.getAnnotation(Element.class);
-                if (element.value().equals(button)) {
-                    return (WebElement) method.invoke(this);
-                }
-            }
-        }
-        throw new RuntimeException();
-    }
 }
+

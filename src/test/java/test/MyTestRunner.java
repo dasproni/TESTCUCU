@@ -1,14 +1,17 @@
 package test;
 import cucumber.api.CucumberOptions;
+import cucumber.api.SnippetType;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features",
+        features = "src/test/java/featur",
         glue = "stepdefs",
-        tags = "@test"
+        tags = {"@Test", "@Test1"},
+        snippets = SnippetType.UNDERSCORE
 )
 public class MyTestRunner {
+
 
 }
