@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/featur",
         glue = "stepdefs",
-        tags = {"@Test", "@Test1"},
+        tags = {"@Test", "@Test1 "},
         snippets = SnippetType.UNDERSCORE
 )
 public class MyTestRunner {
