@@ -17,8 +17,8 @@ public class Hooks {
         Configuration.timeout = 10000;
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\Chromedriver.exe");
         Configuration.timeout = 10000;
-        //ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--disable-save-password-bubble");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-save-password-bubble");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         WebDriverRunner.setWebDriver(driver);
@@ -27,6 +27,6 @@ public class Hooks {
 
     @After
     public void after() {
-        WebDriverRunner.closeWebDriver();
+        //WebDriverRunner.closeWebDriver();
     }
 }
